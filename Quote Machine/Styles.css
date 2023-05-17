@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-color: #b99667;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+#quote-box {
+    background-color: #e9decf;
+    border-radius: 3%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding: 50px 50px 30px 50px;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+}
+
+#quote-box h1 {
+    font-size: 1.8em;
+}
+
+#quote-box h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+#text {
+    color: #383838;
+    font-family: 'Noto Serif JP', serif;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.quote-icon {
+    padding-right: 10px;
+}
+
+#author {
+    color: #383838;
+    font-family: 'Volkhov', serif;
+    text-align: right;
+}
+
+.button-container {
+    display:flex;
+    margin-top: 15px;
+    justify-content:flex-end;
+}
+
+#new-quote {
+    background-color: #5D5852;
+    border-radius: 10%;
+    color: #e9decf;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+#new-quote:hover {
+    background-color: rgba(93, 88, 82, 0.671);
+}
+
+.fa-twitter-square {
+    color: #0198a0;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.fa-twitter-square:hover {
+    color: #00acb563;
+}
+
+footer {
+    bottom:0;   
+    font-size: 0.7em;
+    left:0;
+    padding-bottom:5px;
+    position:absolute;
+    right:0;
+    text-align:center
+}
+
+.footer-link {
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+    text-decoration:underline;
+}
+.footer-link:hover {
+    color: rgba(0, 0, 0, 0.836);
+    text-decoration: none
+}
+
+.profile-icon {
+    padding-right:5px;
+}
+
+@media only screen and (max-width: 400px){
+    #quote-box {
+        padding: 15px 15px 7.5px 15px;
+        width: 85%;
+    }
+    #quote-box h1 {
+        font-size: 1em;
+    }
+
+    #quote-box h3 {
+        font-size: 0.8em;
+        text-align:center;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    .footer-text {
+        display:none;
+    }
+
+}
+
+@media only screen and (max-height: 500px) {
+    #quote-box {
+        margin-top: 20px;
+        position:static;
+        top:0;
+        transform: none;
+    }
+
+    #quote-box h1 {
+        font-size: 1em;
+    }
+    
+    #quote-box h3 {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+    }
+
+    .button-container {
+        margin-top: 5px;
+    }
+
+    #new-quote {
+        padding: 5px;
+        font-size: 0.8em;
+    }
+
+    .footer-text {
+        display:none;
+    }
+}
