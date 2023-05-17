@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body { 
+    background: #506663;
+    display: flex;
+    justify-content: center;
+    font-family: 'Yantramanav', sans-serif;;
+}
+
+#drum-machine {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position:absolute;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+#display {
+    border: 1px solid #c8d4a2;
+    border-radius: 3px;
+    color: #cbd3b0;
+    font-family: 'Gugi', cursive;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+#buttons-volume {
+    border: 2px solid #c8d4a2;
+    border-radius: 3px;
+    display: flex;
+}
+
+#button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    width: 225px;
+ }
+
+button {
+    font-family: 'Audiowide', cursive;
+    font-size: 0.95em;
+}
+
+.drum-pad {
+    background: #c3c0ad;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.349);
+    cursor: pointer;
+    height: 60px;
+    margin: 5px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+.drum-pad:hover {
+    border: 1px solid rgb(107, 100, 100);
+}
+
+.drum-pad-active, .drum-pad:active {
+    background: #ae9820;
+    border: 2px solid rgba(0, 0, 0, 0.445);
+    box-shadow: none;
+}
+
+.volume-container {
+    border: 1px solid #c8d4a2;
+    display:flex;
+    justify-content: center;
+    width: 45px;
+}
+
+input[type = "range"] {
+    cursor:pointer;
+    height: 100%;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type = "range"]:hover {
+    opacity: 1;
+}
+
+input[type = "range"]::-moz-range-thumb {
+    width: 22px; 
+    height: 22px;
+    background: #ae9820; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.chrome-slider {
+    -webkit-appearance: slider-vertical;
+}
+
+footer {
+    background: #c8d4a2;
+    border-top: 1px solid #c3c0ad;
+    bottom:0;   
+    font-size: 0.9em;
+    left:0;
+    padding: 10px 0;
+    position:absolute;
+    right:0;
+    text-align:center
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: gray;
+}
+
+.footer-text {
+    display:none;
+    padding-bottom: 10px;
+}
+
+.fab {
+    color: black;
+}
+
+.fab:hover {
+    color: gray
+}
+
+@media only screen  and (min-width : 768px) {
+    #button-container {
+        width: 325px;
+    }
+    button {
+        font-size: 1.7em;
+    }
+    .drum-pad {
+        height: 80px;
+        width: 80px;
+    }
+    .footer-text {
+        display: block;
+    }
+}

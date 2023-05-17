@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drum Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Yantramanav:700|Gugi&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/3431e6ad2c.js"></script>
+</head>
+
+<body>
+    <!-- <script src="  https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    
+    <div id="drum-machine">
+        <div id="display"></div>
+        <div id="buttons-volume">
+            <div id="button-container">
+                <button title="Left crash cymbal" class="drum-pad" id="left-crash">
+                    Q<audio src="assets/left-crash.wav" class="clip" id="Q"></audio>
+                </button>
+                <button title="Right crash cymbal" class="drum-pad" id="right-crash">
+                    W<audio src="assets/right-crash.wav" class="clip" id="W"></audio>
+                </button>
+                <button title="Ride crash cymbal" class="drum-pad" id="ride-cymbal">
+                    E<audio src="assets/ride.wav" class="clip" id="E"></audio>
+                </button>
+                <button title="Hi-Hat cymbal" class="drum-pad" id="closed-hh">
+                    A<audio src="assets/closed_hh.wav" class="clip" id="A"></audio>
+                </button>
+                <button title="Higher tom" class="drum-pad" id="tom1">
+                    S<audio src="assets/tom1.wav" class="clip" id="S"></audio>
+                </button>
+                <button title="Mid tom" class="drum-pad" id="tom2">
+                    D<audio src="assets/tom2.wav" class="clip" id="D"></audio>
+                </button>
+                <button title="Snare drum" class="drum-pad" id="snare">
+                    Z<audio src="assets/snare.wav" class="clip" id="Z"></audio>
+                </button>
+                <button title="Bass" class="drum-pad" id="bass-drum">
+                    X<audio src="assets/bassdrum.wav" class="clip" id="X"></audio>
+                </button>
+                <button title="Lower tom" class="drum-pad" id="tom3">
+                    C<audio src="assets/tom3.wav" class="clip" id="C"></audio>
+                </button>
+            </div>
+            <div class="volume-container">
+                <input title="Volume" type="range" min="0" max="100" value="50" class="slider" id="volume"
+                    onchange="volume = this.value" orient="vertical">
+            </div>
+        </div>
+
+
+    </div>
+    <footer>
+        <p class="footer-text">Created by Luz Ojeda for the "<a class="footer-link"
+                href="https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine"
+                title="Build a Drum Machine in FreeCodeCamp">Build a Drum Machine
+                challenge</a>" at FreeCodeCamp (August, 2019)</p>
+
+        <a class="footer-link" href="https://github.com/lezojeda" target="_blank" title="Link to my GitHub profile">
+            <i class="fab fa-github fa-3x profile-icon"></i></a>
+        <a class="footer-link" href="https://www.freecodecamp.org/lezojeda" target="_blank"
+            title="Link to my FreeCodeCamp profile">
+            <i class="fab fa-free-code-camp fa-3x profile-icon"></i></a>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+        if(is_chrome){
+        document.getElementById("volume").classList.add('chrome-slider');
+        }
+    </script>
+</body>
+
+</html>
